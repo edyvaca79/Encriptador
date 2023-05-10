@@ -1,5 +1,7 @@
+
+  
 *{
-    background: #F3F5FC;
+    background: #b7e6d1;
     font-family: 'Inter';
     font-weight: 400;
     font-size: 32px;
@@ -18,7 +20,10 @@ main{
     margin-left: 80px;
 }
 .text-area{
-    border:none;
+    background-color: rgba(0,0,0,0.25);
+    border-color: #96d3b7;
+    border-radius: 20px;
+    text-align: center;
     color: #0a3871;
     margin-top: 20px;
     text-transform: lowercase;
@@ -28,8 +33,9 @@ main{
         outline: none;
     }
 .mensaje{
-    background: white;
+    background: #96d3b7;
     background-image: url(/imagenes/Muñeco.png);
+    background-position: center;
     background-repeat: no-repeat;
     border: none;
     border-radius: 30px;
@@ -38,6 +44,7 @@ main{
     margin-top: 20px;
     position:fixed;
     pointer-events: none;
+    text-align: center;
 }
 .mensaje:focus{
     outline: none;

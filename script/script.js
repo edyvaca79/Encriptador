@@ -34,6 +34,9 @@ function desencriptar(stringDesencriptada){
         if(stringDesencriptada.includes(matrizCodigo[i][1])){
             stringDesencriptada = stringDesencriptada.replaceAll(matrizCodigo[i][1],matrizCodigo[i][0])
         }
+
+        var boton = document.querySelector(".btn-copiar");
+        boton.innerText = "¡Copiar!";
     }
     return stringDesencriptada
 }
@@ -50,10 +53,8 @@ function copiarAlPortapapeles() {
       console.error("Error al copiar el texto al portapapeles: ", err);
     }
   
-    // Opcional: Cambiar el texto del botón para indicar que se copió
     var boton = document.querySelector(".btn-copiar");
     boton.innerText = "¡Copiado!";
   
-    textarea.setAttribute("disabled", true); // Volver a deshabilitar el textarea
   }
   
