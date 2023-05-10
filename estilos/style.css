@@ -15,7 +15,7 @@
 }
 
 main{
-    display: flex;
+    display:flex;
     margin-bottom: 50px;
     margin-left: 80px;
 }
