@@ -38,14 +38,22 @@ function desencriptar(stringDesencriptada){
     return stringDesencriptada
 }
 function copiarAlPortapapeles() {
-    var textareas = document.getElementsByClassName("mensaje");
-    if (textareas.length > 0) {
-      var textarea = textareas[0];
-      textarea.select();
-      textarea.setSelectionRange(0, 99999); // Para dispositivos móviles
+    var textarea = document.querySelector(".mensaje");
+    textarea.removeAttribute("disabled"); // Habilitar temporalmente el textarea
+    textarea.select();
+    textarea.setSelectionRange(0, 99999); // Para dispositivos móviles
+  
+    try {
       document.execCommand("copy");
-      textarea.blur();
-      alert("El contenido se ha copiado al portapapeles.");
+      console.log("Texto copiado al portapapeles.");
+    } catch (err) {
+      console.error("Error al copiar el texto al portapapeles: ", err);
     }
+  
+    // Opcional: Cambiar el texto del botón para indicar que se copió
+    var boton = document.querySelector(".btn-copiar");
+    boton.innerText = "¡Copiado!";
+  
+    textarea.setAttribute("disabled", true); // Volver a deshabilitar el textarea
   }
   
