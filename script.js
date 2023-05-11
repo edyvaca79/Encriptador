@@ -57,4 +57,23 @@ function copiarAlPortapapeles() {
     boton.innerText = "¡Copiado!";
   
   }
-  
+  function showProgress() {
+    $('#progressModal').modal('show');
+
+    var progressBar = document.querySelector(".progress-bar");
+    var width = 0;
+    var intervalId = setInterval(function() {
+      width += 10;
+      progressBar.style.width = width + "%";
+      progressBar.setAttribute("aria-valuenow", width);
+
+      if (width >= 100) {
+        clearInterval(intervalId);
+        setTimeout(function() {
+          $('#progressModal').modal('hide');
+          progressBar.style.width = "0%";
+          progressBar.setAttribute("aria-valuenow", 0);
+        }, 1000);
+      }
+    }, 200);
+  }
