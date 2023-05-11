@@ -132,5 +132,26 @@ main{
   .typing-animation:focus::placeholder {
     border-right: none;
   }
-  
-  
+
+  .pie{
+    padding-top: 0px;
+    text-align: center;
+    color:#0a3871;
+  }
+
+  a:link {
+    color: blue;
+    text-decoration: none;
+  }
+  a:visited {
+  color: #0a3871;
+  ;
+}
+
+a:hover {
+  color: red;
+}
+a:active {
+    color:#0a3871;
+    ;
+}

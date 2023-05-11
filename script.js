@@ -75,7 +75,7 @@ function animatePlaceholder() {
     const typedText = placeholderText.substring(0, index);
     textarea.setAttribute('placeholder', typedText);
     index++;
-    setTimeout(animatePlaceholder, 100);
+    setTimeout(animatePlaceholder, 300);
   } else {
     index = 0;
     animatePlaceholder();
