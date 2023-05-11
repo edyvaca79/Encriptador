@@ -12,7 +12,7 @@
 <body>
     <header class="encabezado">
         <img class="logo" src="https://raw.githubusercontent.com/edyvaca79/Encriptador/main/imagenes/Logo.png" alt="logo" >
-        <p class="h5">Encriptador de Texto</p>
+        <p class="h5">Encriptador de Texto <i class="fa-solid fa-key fa-fade fa-sm"></i></p>
     </header>
     <main>
         <div>
@@ -22,17 +22,17 @@
             </div>
             <div class="botones">
                 <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
-                <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+                <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar <i class="fa-solid fa-unlock-keyhole"></i></button>
             </div>
         </div>
         <div>
-            <textarea class="mensaje" cols="30" rows="10" placeholder="Resultado"></textarea>
+            <textarea class="mensaje" cols="23" rows="10" placeholder="Resultado"></textarea>
             <div>
                 <button class="btn-copiar" onclick="copiarAlPortapapeles()" >Copiar</button>
             </div>
         </div>
  <!-- Llamado al script -->
-        <script src="/script.js"></script> 
+        <script src="script.js"></script> 
     </main>
 </body>
 </html>

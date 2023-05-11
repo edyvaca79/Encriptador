@@ -95,7 +95,7 @@ main{
     height: 67px;
     margin-left: 108px;
     margin-top: 402px;
-    position: relative;
+    position:absolute;
     width: 336px;
 }
 .btn-copiar:hover{
@@ -107,3 +107,12 @@ main{
     color: #495057;
     font-size: 18px;
 }
+@keyframes moverBoton {
+    0% { transform: translateX(0px); }
+    50% { transform: translateX(20px); }
+    100% { transform: translateX(0px); }
+  }
+  
+  .btn-copiar {
+    animation: moverBoton 2s infinite;
+  }
