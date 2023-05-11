@@ -11,7 +11,6 @@ function btnEncriptar(){
 function encriptar(stringEncriptada){
     let matrizCodigo =[["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]]
     stringEncriptada = stringEncriptada.toLowerCase()
-
     for(let i=0;i<matrizCodigo.length;i++){
         if(stringEncriptada.includes(matrizCodigo[i][0])){
             stringEncriptada=stringEncriptada.replaceAll(matrizCodigo[i][0],matrizCodigo[i][1])
@@ -57,23 +56,4 @@ function copiarAlPortapapeles() {
     boton.innerText = "¡Copiado!";
   
   }
-  function showProgress() {
-    $('#progressModal').modal('show');
-
-    var progressBar = document.querySelector(".progress-bar");
-    var width = 0;
-    var intervalId = setInterval(function() {
-      width += 10;
-      progressBar.style.width = width + "%";
-      progressBar.setAttribute("aria-valuenow", width);
-
-      if (width >= 100) {
-        clearInterval(intervalId);
-        setTimeout(function() {
-          $('#progressModal').modal('hide');
-          progressBar.style.width = "0%";
-          progressBar.setAttribute("aria-valuenow", 0);
-        }, 1000);
-      }
-    }, 200);
-  }
+  
