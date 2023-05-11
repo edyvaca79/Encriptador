@@ -65,4 +65,30 @@ function copiarAlPortapapeles() {
     boton.innerText = "¡Copiado!";
   
   }
-  
+
+const textarea = document.querySelector('.encriptacion');
+const placeholderText = textarea.getAttribute('placeholder');
+let index = 0;
+
+function animatePlaceholder() {
+  if (index <= placeholderText.length) {
+    const typedText = placeholderText.substring(0, index);
+    textarea.setAttribute('placeholder', typedText);
+    index++;
+    setTimeout(animatePlaceholder, 100);
+  } else {
+    index = 0;
+    animatePlaceholder();
+  }
+}
+
+textarea.addEventListener('focus', () => {
+  textarea.classList.add('typing-animation');
+  textarea.setAttribute('placeholder', '');
+  animatePlaceholder();
+});
+
+textarea.addEventListener('blur', () => {
+  textarea.classList.remove('typing-animation');
+  textarea.setAttribute('placeholder', placeholderText);
+});
